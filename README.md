@@ -1,4 +1,4 @@
-#Azure Open AI using PowerShell
+# Azure Open AI using PowerShell
 
 ## How to securely call Azure Open AI chat API and actively interact with the chat-gpt model using PowerShell
 
