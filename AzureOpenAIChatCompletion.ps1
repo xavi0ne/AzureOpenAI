@@ -1,7 +1,7 @@
 Connect-AzAccount -environment Azureusgovernment
 
-$keyVaultName = "cmagvashared-kv"
-$apiSecretName = "AOAIKey"
+$keyVaultName = "<keyVaultName>"
+$apiSecretName = "<AOAIKey>"
 $secret = Get-AzKeyVaultSecret -VaultName $keyVaultName  -Name $apiSecretName
 $ssPtr = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secret.SecretValue)
 try {
@@ -16,8 +16,8 @@ $header = [ordered]@{
     "api-key" = $secretValueText
 }
 
-$deploymentName = "dev-gpt"
-$resourceName = "aoai-dev"
+$deploymentName = "<deploymentName>"
+$resourceName = "<AzureOpenAIName>"
 $maxTokens = 800
 $temperature = 0.2
 $top_p = 0.5
