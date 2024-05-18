@@ -4,7 +4,7 @@
 
 ### Pre-requisites
 
-~ An Azure Subscription
-~ An existing Azure Open AI service with chat-gpt deployment model
-~ An existing Azure Key Vault with the Azure Open AI API Key added as a secret.
++ An Azure Subscription
++ An existing Azure Open AI service with chat-gpt deployment model
++ An existing Azure Key Vault with the Azure Open AI API Key added as a secret.
 
