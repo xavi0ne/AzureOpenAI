@@ -4,6 +4,7 @@
 
 ### Pre-requisites
 
++ PowerShell 5.1 or later installed
 + An Azure Subscription
 + An existing Azure Open AI service with chat-gpt deployment model
 + An existing Azure Key Vault with the Azure Open AI API Key added as a secret.
