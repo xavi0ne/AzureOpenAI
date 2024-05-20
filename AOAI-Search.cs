@@ -3,19 +3,19 @@ using Azure.Core;
 using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
 
-string endpoint = "https://aoai-dev.openai.azure.us/";
-SecretClient secretClient = new(new Uri("https://cmagvashared-kv.vault.usgovcloudapi.net/"), new DefaultAzureCredential());
+string endpoint = "<AOAIendpointURL>";
+SecretClient secretClient = new(new Uri("<kvURL>"), new DefaultAzureCredential());
 
-KeyVaultSecret azureOpenAIAPISecret = await secretClient.GetSecretAsync("AOAIKey");
-KeyVaultSecret azureSearchAPISecret = await secretClient.GetSecretAsync("AISearchKey");
+KeyVaultSecret azureOpenAIAPISecret = await secretClient.GetSecretAsync("<AOAIKeyName>");
+KeyVaultSecret azureSearchAPISecret = await secretClient.GetSecretAsync("<AISearchKeyName>");
 
 string AIkey = azureOpenAIAPISecret.Value;
 string Searchkey = azureSearchAPISecret.Value;
 
 var client = new OpenAIClient( new Uri(endpoint), new Azure.AzureKeyCredential(AIkey));
-var deploymentId = "dev-gpt";
-var searchEndpoint = "https://search-dev.search.azure.us";
-var searchIndexName = "azureblob-index";
+var deploymentId = "<AOAImodelName>";
+var searchEndpoint = "<AzureSearchendpointURL>";
+var searchIndexName = "<searchIndexName>";
 
 var chatCompletionsOptions = new ChatCompletionsOptions()
 {
