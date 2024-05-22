@@ -16,6 +16,7 @@ $header = [ordered]@{
     "api-key" = $secretValueText
 }
 
+$apiversion = <AzureOpenAIapiversion>
 $deploymentName = "<deploymentName>"
 $resourceName = "<AzureOpenAIName>"
 $maxTokens = 800
