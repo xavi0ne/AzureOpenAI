@@ -51,7 +51,6 @@ module windowsApp'windowsApp-module.bicep' = {
     runtimeValue: runtimeValue
     versionName: versionName
     versionValue: versionValue
-    storageAccountName: storageAccountName
   }
   dependsOn: [
     appSvcPlan
